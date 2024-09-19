@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgb(7, 132, 139), rgb(161, 71, 3));
+}
+
+.window {
+    position: relative;
+    width: 340px;
+    height: 480px;
+    background: #fff;
+    border-radius: 170px;
+    border: 4px solid  rgb(5, 180, 189);
+    box-shadow: -10px -10px rgba(5, 180, 189, 0.824);
+    overflow: hidden;
+}
+
+.window::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    left: calc(50% + 45px);
+    border-radius: 50%;
+    top: 190px;
+    height: 30px;
+    background: #f44336;
+    animation: ball 1s ease-in-out infinite;
+}
+
+@keyframes ball {
+    0%, 100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+.window .stair {
+    position: absolute;
+    width: 100%;
+    right: calc(-100% + 0px);
+    top: 100px;
+    animation: stairs 1s linear infinite;
+}
+
+@keyframes stairs {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(40px) translateY(-40px);
+    }
+}
+
+.window .stair span {
+    position: absolute;
+    top:  calc(var(--i) * 40px);
+    right: calc(var(--i) * 40px);
+    width: 100%;
+    min-height: 40px;
+    background: #114b64;
+    border-bottom: 4px solid #fff;
+    border-top-left-radius: 6px;
+}
+
+
+
+
+
+
+
+
+
+.window2 {
+    position: relative;
+    width: 340px;
+    height: 480px;
+    background: #fff;
+    border-radius: 170px;
+    border: 4px solid #fc7600;
+    box-shadow: 10px 10px #fc7600;
+    overflow: hidden;
+    margin-left: 200px;
+}
+
+.window2::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    left: calc(50% + 80px);
+    border-radius: 50%;
+    top: 190px;
+    height: 30px;
+    background: #067e72;
+    animation: balls 1s ease-in-out infinite;
+}
+
+@keyframes balls {
+    0%, 100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+.window2 .stair2 {
+    position: absolute;
+    width: 100%;
+    right: calc(-100% + -40px);
+    top: 100px;
+    animation: stair2 1s linear infinite;
+}
+
+@keyframes stair2 {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-40px) translateY(40px);
+    }
+}
+
+.window2 .stair2 span {
+    position: absolute;
+    top:  calc(var(--i) * 40px);
+    right: calc(var(--i) * 40px);
+    width: 100%;
+    min-height: 40px;
+    background: #ff4800;
+    border-bottom: 4px solid #fff;
+    border-top-left-radius: 6px;
+}
+
+
